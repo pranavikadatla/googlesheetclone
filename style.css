@@ -1,0 +1,85 @@
+*{
+    margin: 0px;
+    padding:0px;
+    background-color: rgb(209, 205, 205);
+}
+.navbar{
+    background-color: #218c74;
+    display: flex;
+    gap:30px;
+    color:white;
+    position: sticky;
+    top:0px;
+    z-index:100;
+
+}
+a{
+    text-decoration:none;
+    color:white;
+    background: #218c74;
+    padding: 8px;
+}
+#header{
+    display:flex;
+    position: sticky;
+    top:0px;
+}
+#header>b{
+    min-width:100px;
+    border:1px solid #dfe4e9;
+    text-align: center;
+    padding:10px 0;
+    
+}
+.row{
+    display: flex;
+}
+.row > b,
+.row > div {
+    min-width:100px;
+    border:1px solid #dfe4e9;
+    padding:10px 0;
+   
+}
+
+.row > b{
+    text-align: center;
+    position: sticky;
+    left: 0px;
+}
+#options{
+    padding: 10px;
+    background-color:#dfe4 ;
+}
+#active-cell{
+    padding: 3px 10px;
+    background-color: white;
+    margin: 2px;
+}
+#body{
+    width:fit-content;
+}
+.menus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.active-option{
+    background-color: #d0d8e0;
+}
+.menus>div{
+    padding:10px;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 4px;
+
+}
+.menus>div:hover{
+    background-color: #d0d8e0aa;
+}
+#fontSizeSelector,#fontFamilySelector{
+    width:100px;
+    height:25px;
+    background-color: aliceblue;
+}

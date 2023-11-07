@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goolge Sheet</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body > 
+    <nav class="navbar"> 
+        <a href="#">File</a>
+        <a href="#" style="background-color: rgb(209,205,205); margin-top:8px;">Home</a>
+        <a href="#">Insert</a>
+        <a href="#">Layout</a>
+        <a href="#">Help</a>
+        
+    </nav>
+    <div id="options">
+    <div class="menus">
+        <i class="fa-solid fa-scissors" style="color: #191b1f;"></i>
+        <i class="fa-regular fa-copy" style="color: #060709;"></i>
+        <i class="fa-regular fa-clipboard" style="color: #05070b;"></i>
+        <select id="fontFamilySelector" onchange="changeFontFamily()">
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Arial">Arial</option>
+            <option value="Noto Sans">Noto Sans</option>
+            <option value="palatino">palatino</option>
+            <option value="Impact">Impact</option>
+        
+        </select>
+        <select id="fontSizeSelector" onchange="changeFontSize()">
+        <option value="14">14px</option>
+        <option value="16">16px</option>
+        <option value="18">18px</option>
+        <option value="20">20px</option>
+    
+    </select>
+   
+
+        <div id="bold" onclick="onClickBold(this)">B</div>
+        <div id="italic" onclick="onClickItalic(this)">I</div>
+        <div id="underLine" onclick="onClickUnderLine(this)">U</div>
+        <div class="material-icons active-option text-align" data-value="start"
+        onclick="onClickTextAlign(this)">format_align_left</div>
+        <div class="material-icons text-align " data-value="center"
+        onclick="onClickTextAlign(this)">format_align_center</div>
+        <div class="material-icons text-align" data-value="right"
+        onclick="onClickTextAlign(this)">format_align_right </div>
+        <div id="text-color" >
+            <label for="color-picker"><span class="material-icons">format_color_text</span></label>
+            <input type="color"onchange="onChangeTextColor(this)" id="color-picker"style="width:0;height:0;"/>
+
+        </div>
+        <div id="bgcolor">
+            <label for="bgcolor-picker"><span class="material-icons">format_color_fill</span></label>
+            <input type="color" onchange="onChangeBackGroundColor(this)" id="bgcolor-picker"style="width:0;height:0;"/>
+
+        </div>
+    </div>
+        <span id="active-cell">Null</span>
+    </div>
+    <main style="position:relative;width:100vw;height: 100vh;overflow: scroll;">
+    <div id="header">
+        <b style="position:sticky;left:0px; ;z-index:100;" ></b>
+    </div>  
+    <section id="body"></section>
+</main>
+   <script src="./options.js"></script>
+    <script src="./script.js"></script>
+    
+</body>
+</html>
